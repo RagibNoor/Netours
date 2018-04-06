@@ -1,0 +1,121 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+
+body{
+    font-family: "lato" , sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 1%;
+}
+.header{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom,
+                     rgba(126, 213, 111, 0.815) ,
+                      rgba(43, 180, 132, 0.801)),
+                       url(../img/hero.jpg);
+    background-size: cover; 
+    background-position: top;
+    clip-path: polygon(0 0 , 100% 0, 100% 75vh , 0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 3%;
+    left: 2.5%;
+     
+
+}
+.logo{
+    width: 25%;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden; /*hidden element under that */
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 22px; 
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    /*
+    animation-iteration-count: 2;
+    animation-delay: 3s;
+    */
+}
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 12.4px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    margin-bottom: 20px;
+}
+
+.btn:link , .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px , 40px;
+    display: inline-block;
+
+}
+btn:hover {
+    transform: translate(-3px);
+
+}
+btn:active {
+    transform: translate(1px);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translate(100px);
+    }
+    80% {
+        transform: translate(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    80% {
+        transform: translate(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
