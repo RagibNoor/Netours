@@ -1,161 +1,133 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;   
-}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 
-body{
-    font-family: "lato" , sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #777;
-    padding: 1%;
-}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px); }
+  80% {
+    transform: translate(-20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
 
-.header{
-    height: 95vh;
-    background-image:linear-gradient(to right bottom,
-                     rgba(126, 213, 111, 0.815) ,
-                      rgba(43, 180, 132, 0.801)),
-                       url(../img/hero.jpg);
-    background-size: cover; 
-    background-position: top;
-    clip-path: polygon(0 0 , 100% 0, 100% 75vh , 0 100%);
-    position: relative;
-}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px); }
+  80% {
+    transform: translate(20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
 
-.logo-box{
-    position: absolute;
-    top: 3%;
-    left: 2.5%;
-     
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-}
-.logo{
-    width: 25%;
-}
+html {
+  font-size: 10px; }
 
-.text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    text-align: center;
-}
-.heading-primary{
-    color: #fff;
-    text-transform: uppercase;
-    backface-visibility: hidden; /*hidden element under that */
-}
-.heading-primary-main{
+body {
+  font-family: "lato" , sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /*hidden element under that */ }
+  .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 22px; 
-
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out;
     /*
-    animation-iteration-count: 2;
-    animation-delay: 3s;
-    */
-}
-.heading-primary-sub {
+     animation-iteration-count: 2;
+     animation-delay: 3s;
+     */ }
+  .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 12.4px;
+    letter-spacing: 1.7rem;
     animation-name: moveInRight;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-    margin-bottom: 20px;
-}
+    margin-bottom: 2px; }
 
-.btn:link , .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 35px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s; 
-    position: relative;
-    animation-name: moveUp;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 35px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  animation-name: moveUp;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; }
 
-}
 .btn:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
-}
 .btn:active {
-    transform: translateY(1px);
-}
+  transform: translateY(1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
 .btn-white {
-    background-color: #fff;
-    color: #777;
-}
+  background-color: #fff;
+  color: #777; }
+  .btn-white::after {
+    background-color: #fff; }
 
 .btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    transition: all .4s;
-    border-radius: 100px;
-}
-.btn-white::after {
-    background-color: #fff;
-}
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  transition: all .4s;
+  border-radius: 100px; }
 
-@keyframes moveUp {
-    0% {
-        opacity: 0;
-        transform:translateY(40px);
-    }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.815), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
 
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
 
-    100% {
-        opacity: 1;
-        transform:translateY(0px);
-    }
-}
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translate(100px);
-    }
-    80% {
-        transform: translate(-20px);
-    }
+.logo {
+  width: 2.5rem; }
 
-    100% {
-        opacity: 1;
-        transform: translate(0px);
-    }
-}
-
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translate(-100px);
-    }
-    80% {
-        transform: translate(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0px);
-    }
-}
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
