@@ -2,9 +2,9 @@
     &:link , &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 10px 35px;
+        padding: 1rem 3.5;
         display: inline-block;
-        border-radius: 100px;
+        border-radius: 10rem;
         transition: all .2s; 
         position: relative;
         animation-name: moveUp;
@@ -13,7 +13,7 @@
     
     }
     &:hover {
-        transform: translateY(-3px);
+        transform: translateY(-.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black , .3);
 
         &::after {
@@ -23,7 +23,7 @@
     
     }
     &:active {
-        transform: translateY(1px);
+        transform: translateY(.1rem);
         box-shadow: 0 .5rem 1rem rgba($color-black , .3);
     }
     &-white {
@@ -45,7 +45,7 @@
         left: 0%;
         z-index: -1;
         transition: all .4s;
-        border-radius: 100px;
+        border-radius: 10rem;
     }
     
    }
