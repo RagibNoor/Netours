@@ -1,0 +1,21 @@
+.composition {
+    position: relative;
+    &_photo{
+           width: 50%;
+       position: absolute;  
+       &_p1 {
+           left :0;
+           top:-2rem
+       }  
+
+       &_p2 {
+        right :0;
+        top:2rem
+    }  
+
+    &_p3 {
+        left :20%;
+        top:10rem;
+    }  
+    }
+}
